@@ -53,7 +53,7 @@ async def tag_check(_, message):
 **𝗛𝗘𝗠𝗟𝗢 {message.from_user.mention}** 
 𝗧𝗔𝗚 𝗟𝗔𝗚𝗔𝗢 𝗘𝗟𝗦𝗘 𝗠𝗔𝗔 𝗖𝗛𝗨𝗗𝗔𝗔𝗢! .
 
-**𝗧𝗔𝗚:** `{TAG}`
+**Tag:** `{TAG}`
 **𝗡𝗢𝗧𝗘:** __Click The Below Button For
 Unmuting YourSelf!__
 """
