@@ -50,19 +50,19 @@ async def tag_check(_, message):
            await message.reply(f"**Error:**\n`{be}`")
            return
        text = f"""
-**Heya {message.from_user.mention}**
-Please add our tag in your name to
-chat again in the group.
+**𝗛𝗘𝗠𝗟𝗢 {message.from_user.mention}** 
+𝗧𝗔𝗚 𝗟𝗔𝗚𝗔𝗢 𝗘𝗟𝗦𝗘 𝗠𝗔𝗔 𝗖𝗛𝗨𝗗𝗔𝗔𝗢! .
 
-**Tag:** `{TAG}`
-**Note:** __Click The Below Button For
+**𝗧𝗔𝗚:** `{TAG}`
+**𝗡𝗢𝗧𝗘:** __Click The Below Button For
 Unmuting YourSelf!__
 """
        await message.reply(
         text,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Unmute Me", callback_data=f"unmute_{user}")]
-           ]
+            [InlineKeyboardButton("𝗨𝗡𝗠𝗨𝗧𝗘 𝗠𝗘", callback_data=f"unmute_{user}) ]
+]
+          
          )
        )
 
@@ -70,14 +70,14 @@ Unmuting YourSelf!__
 async def unmute(client, cb):
     user = cb.matches[0].group(1)
     if cb.from_user.id != user:
-      await cb.answer("This Button is not for you!", show_alert=True)
+      await cb.answer("𝗕𝗛𝗔𝗞𝗞 𝗕𝗦𝗗𝗞", show_alert=True)
       return
     if TAG in cb.from_user.first_name:
       await tagcheck.unban_chat_member(cb.message.chat.id, user)
       await cb.answer("Succesfully Unmuted!")
       await message.delete()
       return
-    await cb.answer("TAG LAGAO ELSE MAA CHUDAO !", show_alert=True)
+    await cb.answer("𝗧𝗔𝗚 𝗟𝗔𝗚𝗔𝗢 𝗘𝗟𝗦𝗘 𝗠𝗔𝗔 𝗖𝗛𝗨𝗗𝗔𝗢!", show_alert=True)
 
 
 tagcheck.run()
