@@ -59,10 +59,9 @@ Unmuting YourSelf!__
 """
        await message.reply(
         text,
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("𝗨𝗡𝗠𝗨𝗧𝗘 𝗠𝗘", callback_data=f"unmute_{user}) ]
-]
-          
+          reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("Unmute Me", callback_data=f"unmute_{user}")]
+           ]
          )
        )
 
