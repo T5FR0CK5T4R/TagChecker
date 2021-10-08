@@ -32,7 +32,7 @@ async def is_admin(message):
 
 @tagcheck.on_message(filters.command("start") & filters.user(OWNER_ID))
 async def start(_, message):
-   await message.reply("I am Alive.")
+   await message.reply("ZINDA HU BSDK.")
 
 @tagcheck.on_message(filters.group)
 async def tag_check(_, message):
@@ -77,7 +77,7 @@ async def unmute(client, cb):
       await cb.answer("Succesfully Unmuted!")
       await message.delete()
       return
-    await cb.answer("Please add tag in your name!", show_alert=True)
+    await cb.answer("TAG LAGAO ELSE MAA CHUDAO !", show_alert=True)
 
 
 tagcheck.run()
